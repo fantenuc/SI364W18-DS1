@@ -43,7 +43,7 @@ def enterData():
 def displayData():
     if request.method == 'POST':
         ingredient = request.form['ingredient']
-        print(ingredient)
+        # print(ingredient)
         api_request = requests.get('http://www.recipepuppy.com/api/', params = {'i': ingredient})
         json_object = json.loads(api_request.text)
         print(json_object)
